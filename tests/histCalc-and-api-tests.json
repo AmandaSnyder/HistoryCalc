@@ -1,0 +1,672 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "7cf2af2d-e090-43d2-b2d1-558c456b706e",
+			"name": "HistCalc",
+			"description": "Automated Testing for the History Calculator application for IT 5236. A port of the tests from Selenium. by Amanda Snyder",
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"cb3cf8a7-71cd-48ed-8e18-170c2cd7fd20",
+				"0b00447d-5469-4c66-b5fa-b302924d0dfc",
+				"6c958c2d-ab36-4f99-ae57-76ab389a5e9d",
+				"219ec407-de3f-4f09-bd1b-55354d2035dc"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2020-10-04T22:50:43.000Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "0b00447d-5469-4c66-b5fa-b302924d0dfc",
+					"name": "Stat200",
+					"url": "https://snyderam.tech",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3d6902f4-bc05-44df-86bd-43a43bda6f7b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "7cf2af2d-e090-43d2-b2d1-558c456b706e",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "219ec407-de3f-4f09-bd1b-55354d2035dc",
+					"name": "isTitleHere",
+					"url": "https://snyderam.tech",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "",
+							"value": "",
+							"equals": false,
+							"description": null,
+							"enabled": false
+						}
+					],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e13e481e-da3f-4a37-8a25-40388439e6eb",
+								"exec": [
+									"pm.test(\"Title is here\", function() {\r",
+									"    document.getElementsByTagName(\"Title\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Title is here\", function() {\r\n    document.getElementsByTagName(\"Title\");\r\n})",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "7cf2af2d-e090-43d2-b2d1-558c456b706e",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "6c958c2d-ab36-4f99-ae57-76ab389a5e9d",
+					"name": "isContentTypeHere",
+					"url": "https://snyderam.tech",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "085c1572-9201-461b-be7e-b96a33c35107",
+								"exec": [
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"folder": null,
+					"preRequestScript": null,
+					"tests": "pm.test(\"Content-Type is present\", function () {\r\n    pm.response.to.have.header(\"Content-Type\");\r\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "7cf2af2d-e090-43d2-b2d1-558c456b706e",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "cb3cf8a7-71cd-48ed-8e18-170c2cd7fd20",
+					"name": "GetPage",
+					"url": "https://snyderam.tech",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "7cf2af2d-e090-43d2-b2d1-558c456b706e",
+					"headers": "",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+			"name": "HistCalcAPI",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"8182fdbb-8250-4edd-a590-2c9a6330b01f",
+				"1b3856fd-02ac-49db-96e2-016329f33a0e",
+				"74ed74f9-c6dc-4ec6-8dbb-e82ea6ce2c26",
+				"f34cbdfd-feee-4293-a721-6777eb5698b6",
+				"00972127-434f-473c-b14c-7c37b0ee6970",
+				"95509973-8a01-40f8-a8c1-3b30932e5094",
+				"702f398d-6dae-49df-88d7-c26bdcd25a8e",
+				"64e6f357-4959-4f6e-8b2f-7415ba242d24",
+				"852ce933-d522-49bd-88db-fae124e2db1b",
+				"0e51e750-bfe9-45c7-8c13-ce66e554a985"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2020-10-28T19:59:16.000Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "00972127-434f-473c-b14c-7c37b0ee6970",
+					"name": "multiplication",
+					"url": "https://snyderam.tech/dev/api/1.0.0/calculator.php?d1=3&d2=5&op=*",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "*",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "0e51e750-bfe9-45c7-8c13-ce66e554a985",
+					"name": "cookieTest",
+					"url": "https://snyderam.tech/dev/api/1.0.0/memory.php?d1=3&d2=5&op=-",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "-",
+							"equals": true,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "1b3856fd-02ac-49db-96e2-016329f33a0e",
+					"name": "powraise",
+					"url": "https://snyderam.tech/dev/api/1.0.0/calculator.php?d1=3&d2=5&op=**",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "**",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "64e6f357-4959-4f6e-8b2f-7415ba242d24",
+					"name": "updateCookie",
+					"url": "https://snyderam.tech/dev/api/1.0.0/memory.php?d1=3&d2=5&op=-",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "-",
+							"equals": true,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "702f398d-6dae-49df-88d7-c26bdcd25a8e",
+					"name": "getCookieData",
+					"url": "https://snyderam.tech/dev/api/1.0.0/memory.php?d1=3&d2=5&op=-",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "-",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "apikey",
+						"apikey": [
+							{
+								"key": "value",
+								"value": "7BwmNS28XhZERrncdEbms7Efjv5NqLkT2zHhp2PxvqnBJm2NBZ5r9WJLpeqq9wTAcPbFug8erAJ",
+								"type": "string"
+							},
+							{
+								"key": "key",
+								"value": "apikey",
+								"type": "string"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"currentHelper": "apikeyAuth",
+					"helperAttributes": {
+						"id": "apikey",
+						"key": "apikey",
+						"value": "7BwmNS28XhZERrncdEbms7Efjv5NqLkT2zHhp2PxvqnBJm2NBZ5r9WJLpeqq9wTAcPbFug8erAJ"
+					},
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "74ed74f9-c6dc-4ec6-8dbb-e82ea6ce2c26",
+					"name": "subtraction",
+					"url": "https://snyderam.tech/dev/api/1.0.0/calculator.php?d1=3&d2=5&op=-",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "-",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "8182fdbb-8250-4edd-a590-2c9a6330b01f",
+					"name": "addition",
+					"url": "https://snyderam.tech/dev/api/1.0.0/calculator.php?d1=3&d2=5&op=%2B",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "%2B",
+							"equals": true,
+							"description": "addition symbol, encoded",
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "apikey",
+						"apikey": [
+							{
+								"key": "value",
+								"value": "7BwmNS28XhZERrncdEbms7Efjv5NqLkT2zHhp2PxvqnBJm2NBZ5r9WJLpeqq9wTAcPbFug8erAJ",
+								"type": "string"
+							},
+							{
+								"key": "key",
+								"value": "apikey",
+								"type": "string"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"currentHelper": "apikeyAuth",
+					"helperAttributes": {
+						"id": "apikey",
+						"key": "apikey",
+						"value": "7BwmNS28XhZERrncdEbms7Efjv5NqLkT2zHhp2PxvqnBJm2NBZ5r9WJLpeqq9wTAcPbFug8erAJ"
+					},
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "852ce933-d522-49bd-88db-fae124e2db1b",
+					"name": "deleteCookie",
+					"url": "https://snyderam.tech/dev/api/1.0.0/memory.php?d1=3&d2=5&op=-",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "-",
+							"equals": true,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "95509973-8a01-40f8-a8c1-3b30932e5094",
+					"name": "makeCookie",
+					"url": "https://snyderam.tech/dev/api/1.0.0/memory.php?d1=3&d2=5&op=-",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "-",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": {
+						"type": "apikey",
+						"apikey": [
+							{
+								"key": "value",
+								"value": "7BwmNS28XhZERrncdEbms7Efjv5NqLkT2zHhp2PxvqnBJm2NBZ5r9WJLpeqq9wTAcPbFug8erAJ",
+								"type": "string"
+							},
+							{
+								"key": "key",
+								"value": "apikey",
+								"type": "string"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"currentHelper": "apikeyAuth",
+					"helperAttributes": {
+						"id": "apikey",
+						"key": "apikey",
+						"value": "7BwmNS28XhZERrncdEbms7Efjv5NqLkT2zHhp2PxvqnBJm2NBZ5r9WJLpeqq9wTAcPbFug8erAJ"
+					},
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "f34cbdfd-feee-4293-a721-6777eb5698b6",
+					"name": "division",
+					"url": "https://snyderam.tech/dev/api/1.0.0/calculator.php?d1=3&d2=5&op=%2F",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "d1",
+							"value": "3",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "d2",
+							"value": "5",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "op",
+							"value": "%2F",
+							"equals": true,
+							"description": "division operator",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "8d5b49ce-fa37-4223-95e1-2f954ce95548",
+					"headers": "",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "b6758250-60e9-483f-9275-c69d06d06b1c",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
