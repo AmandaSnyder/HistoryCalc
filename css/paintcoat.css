@@ -1,0 +1,71 @@
+/*
+   Author: Amanda Snyder
+   Last Revised: 9-13-20
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- lorem
+- ipsum
+*/
+
+.container {
+    
+    padding: 4%;
+    clear: both;
+}
+.calc {
+    background-color: rgba(230, 232, 255, 0.45);
+}
+nav {
+    background-color: rgba(66,55,120,1);
+    color: rgb(255,255,255);
+}
+.navLink {
+    background-color: rgba(66,55,120,1);
+    color: rgb(255,255,255);
+    font-weight: 800;
+}
+.navLink:hover {
+    background-color: rgba(255,255,255,1);
+    color: rgba(66,55,120,1);
+}
+.numButton {
+    background-color: rgba(230, 232, 255, 0.75);
+    text-align: center;
+    font-weight: 600;
+}
+//@media (min-width: 0px) {
+//    .numButton {
+//        display: none;
+//    }
+//}
+@media (min-width: 400px) {
+    .numButton {
+        display: block;
+    }
+}
+.numButton:hover {
+    background-color: rgba(230, 230, 244, 1);
+}
+.panel {
+    background-color: rgba(230, 230, 244, 1);
+    color: rgba(90,90,130,1);
+    display: none;
+}
+.history {
+    background-color: rgba(90,90,130,1);
+    color: #fff
+    
+}
+.history:active, .history:hover {
+    background-color: rgba(144,123,176,1);
+}
+
+.wip {
+    background-color: #bbb;
+    color: #eee;
+    border-color: #aaa;
+    font-variant: small-caps;
+}
+
